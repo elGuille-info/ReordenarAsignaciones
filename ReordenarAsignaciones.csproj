@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+	  <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+	  <AssemblyVersion>1.2.0.0</AssemblyVersion>
+	  <FileVersion>1.2.0.0</FileVersion>
+	  <Version>1.2.0</Version>
+	  <Authors>elguille.info</Authors>
+	  <Company>ElGuille</Company>
+	  <Copyright>Copyright © 2023 Guillermo Som (Guille)</Copyright>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <Description>Aplicación de consola para cambiar el orden de las asignaciones.  (revisión del 21-may-2023)
+Versión para .NET 6.</Description>
+	  <SignAssembly>True</SignAssembly>
+	  <AssemblyOriginatorKeyFile>elGuille_compartido.snk</AssemblyOriginatorKeyFile>
+	  <Title>ReaordenarAsignaciones</Title>
+	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
+	  <PackAsTool>True</PackAsTool>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensiones\Extensiones.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Extensiones\Extensiones.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Extensiones\Extensiones.vb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

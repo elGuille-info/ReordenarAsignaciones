@@ -1,0 +1,96 @@
+﻿Invertir las asignaciones:
+de controles a tipo de datos y viceversa.
+
+En este código se utilizan las extensiones AsDecimal, AsInteger, AsDouble, AsDate, AsDateTime y AsTimeSpan
+
+
+Por ejemplo si tenemos esto:
+
+LaFactura.Activa = chkFacActiva.IsChecked;
+LaFactura.Actividad = txtFacActividad.Text;
+LaFactura.Actividad1 = TxtFacActividad1.Text;
+LaFactura.Actividad2 = TxtFacActividad2.Text;
+LaFactura.Adultos = txtFacAdultos.Text.AsInteger();
+LaFactura.Adultos2 = txtFacAdultos2.Text.AsInteger();
+LaFactura.Agente = txtFacAgente.Text;
+LaFactura.Concepto1 = TxtFacConcepto1.Text;
+LaFactura.Concepto2 = TxtFacConcepto2.Text;
+LaFactura.CuantasReservas = txtFacCuantasReservas.Text.AsInteger();
+LaFactura.CuantosPagos = txtFacCuantosPagos.Text.AsInteger();
+LaFactura.Descuento = txtFacDescuento.Text.AsDecimal();
+LaFactura.Domicilio = txtFacDomicilio.Text;
+LaFactura.Duracion = txtFacDuracion.Text.AsDecimal();
+LaFactura.ElCSV = txtFacCSV.Text;
+LaFactura.Email = txtFacEmail.Text;
+LaFactura.Fecha = txtFacFecha.Text.AsDateTime();
+LaFactura.FechaActividad = txtFacFechaActividad.Text.AsDate();
+LaFactura.FechaEd = txtFacFechaEd.Text.AsDateTime();
+LaFactura.FechaFactura = txtFacFechaFactura.Text.AsDateTime();
+LaFactura.HoraActividad = txtFacHoraActividad.Text.AsTimeSpan();
+LaFactura.idDistribuidor = txtFacidDistribuidor.Text.AsInteger();
+LaFactura.ImportePago = txtFacImportePago.Text.AsDecimal();
+LaFactura.ImportePago2 = txtFacImportePago2.Text.AsDecimal();
+LaFactura.ImportePago3 = txtFacImportePago3.Text.AsDecimal();
+LaFactura.NIF = txtFacNif.Text;
+LaFactura.Niños = txtFacNiños.Text.AsInteger();
+LaFactura.Niños2 = txtFacNiños2.Text.AsInteger();
+LaFactura.Nombre = txtFacNombre.Text;
+LaFactura.NumeroFactura = txtFacNumeroFactura.Text;
+LaFactura.Poblacion = txtFacPoblacion.Text;
+LaFactura.Precio1 = TxtFacPrecio1.Text.AsDecimal();
+LaFactura.Precio2 = TxtFacPrecio2.Text.AsDecimal();
+LaFactura.PrecioAdulto = txtFacPrecioAdulto.Text.AsDecimal();
+LaFactura.PrecioNiño = txtFacPrecioNiño.Text.AsDecimal();
+LaFactura.ReservasIDs = txtFacReservasIDs.Text;
+LaFactura.Telefono = txtFacTelefono.Text;
+LaFactura.Total = txtFacTotal.Text.AsDecimal();
+LaFactura.TotalPax1 = TxtFacTotalPax1.Text.AsInteger();
+LaFactura.TotalPax2 = TxtFacTotalPax2.Text.AsInteger();
+LaFactura.Usuario = txtFacUsuario.Text;
+LaFactura.UsuarioEd = txtFacUsuarioEd.Text;
+
+Debe producir algo como esto:
+
+chkFacActiva.IsChecked = LaFactura.Activa;
+txtFacActividad.Text = LaFactura.Actividad;
+TxtFacActividad1.Text = LaFactura.Actividad1;
+TxtFacActividad2.Text = LaFactura.Actividad2;
+txtFacAdultos.Text = LaFactura.Adultos.ToString();
+txtFacAdultos2.Text = LaFactura.Adultos2.ToString();
+txtFacAgente.Text = LaFactura.Agente;
+TxtFacConcepto1.Text = LaFactura.Concepto1;
+TxtFacConcepto2.Text = LaFactura.Concepto2;
+txtFacCuantasReservas.Text = LaFactura.CuantasReservas.ToString();
+txtFacCuantosPagos.Text = LaFactura.CuantosPagos.ToString();
+txtFacDescuento.Text = LaFactura.Descuento.ToString("0.##");
+txtFacDomicilio.Text = LaFactura.Domicilio;
+txtFacDuracion.Text = LaFactura.Duracion.ToString("0.##");
+txtFacCSV.Text = LaFactura.ElCSV;
+txtFacEmail.Text = LaFactura.Email;
+txtFacFecha.Text = LaFactura.Fecha.ToString("dd/MM/yyyy HH:mm");
+txtFacFechaActividad.Text = LaFactura.FechaActividad.ToString("dd/MM/yyyy");
+txtFacFechaEd.Text = LaFactura.FechaEd.ToString("dd/MM/yyyy HH:mm");
+txtFacFechaFactura.Text = LaFactura.FechaFactura.ToString("dd/MM/yyyy HH:mm");
+txtFacHoraActividad.Text = LaFactura.HoraActividad.ToString("hh\\:mm");
+txtFacidDistribuidor.Text = LaFactura.idDistribuidor.ToString();
+txtFacImportePago.Text = LaFactura.ImportePago.ToString("0.##");
+txtFacImportePago2.Text = LaFactura.ImportePago2.ToString("0.##");
+txtFacImportePago3.Text = LaFactura.ImportePago3.ToString("0.##");
+txtFacNif.Text = LaFactura.NIF;
+txtFacNiños.Text = LaFactura.Niños.ToString();
+txtFacNiños2.Text = LaFactura.Niños2.ToString();
+txtFacNombre.Text = LaFactura.Nombre;
+txtFacNumeroFactura.Text = LaFactura.NumeroFactura;
+txtFacPoblacion.Text = LaFactura.Poblacion;
+TxtFacPrecio1.Text = LaFactura.Precio1.ToString("0.##");
+TxtFacPrecio2.Text = LaFactura.Precio2.ToString("0.##");
+txtFacPrecioAdulto.Text = LaFactura.PrecioAdulto.ToString("0.##");
+txtFacPrecioNiño.Text = LaFactura.PrecioNiño.ToString("0.##");
+txtFacReservasIDs.Text = LaFactura.ReservasIDs;
+txtFacTelefono.Text = LaFactura.Telefono;
+txtFacTotal.Text = LaFactura.Total.ToString("0.##");
+TxtFacTotalPax1.Text = LaFactura.TotalPax1.ToString();
+TxtFacTotalPax2.Text = LaFactura.TotalPax2.ToString();
+txtFacUsuario.Text = LaFactura.Usuario;
+txtFacUsuarioEd.Text = LaFactura.UsuarioEd;
+
