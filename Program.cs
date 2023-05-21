@@ -24,12 +24,12 @@ internal class Program
 
     // Intentar no pasar de estas marcas: 60 caracteres. 2         3         4         5         6
     //                                ---------|---------|---------|---------|---------|---------|
-    //[COPIAR]AppDescripcionCopia = " usando snk público y como dotnet tool"
+    //[COPIAR]AppDescripcionCopia = " credo repositorio de nuget"
 
     /// <summary>
     /// La versión actual.
     /// </summary>
-    public static string AppFileVersion { get; } = "1.2";
+    public static string AppFileVersion { get; } = "1.2.1";
 
     /// <summary>
     /// La fecha de modificación.

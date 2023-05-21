@@ -6,9 +6,9 @@
 	  <LangVersion>latest</LangVersion>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
-	  <AssemblyVersion>1.2.0.0</AssemblyVersion>
-	  <FileVersion>1.2.0.0</FileVersion>
-	  <Version>1.2.0</Version>
+	  <AssemblyVersion>1.2.1.0</AssemblyVersion>
+	  <FileVersion>1.2.1.0</FileVersion>
+	  <Version>1.2.1</Version>
 	  <Authors>elguille.info</Authors>
 	  <Company>ElGuille</Company>
 	  <Copyright>Copyright © 2023 Guillermo Som (Guille)</Copyright>
@@ -20,6 +20,9 @@ Versión para .NET 6.</Description>
 	  <Title>ReaordenarAsignaciones</Title>
 	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
 	  <PackAsTool>True</PackAsTool>
+	  <RepositoryUrl>https://github.com/elGuille-info/ReordenarAsignaciones</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageTags>tools, utilidades, elguille, elguille-info, elguille-mola, c-sharp, vb, dotnet</PackageTags>
 
   </PropertyGroup>
 
